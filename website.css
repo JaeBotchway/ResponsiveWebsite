@@ -1,6 +1,41 @@
-*{
-    text-decoration: none;
+
+
+@media (min-width: 600px) {
+    .links {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+    .ads {
+        grid-column: 1 / span 3;
+        grid-row: 4;
+    }
+    .content, .footer {
+        grid-column: 4 / span 9;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
+@media (min-width: 900px) {
+    .links {
+        grid-column: 1 / span 2;
+    }
+    .content {
+        grid-column: 3 / span 7;
+    }
+    .ads {
+        grid-column: 10 / span 3;
+        grid-row: 3;
+    }
+    .footer {
+        grid-column: 1 / span 12;
+    }
+}
+.container {
+    max-width: 1200px;
+}
+
 
 body{
     background-color:white;
@@ -33,6 +68,8 @@ header .head-brand{
 background-color:darkturquoise;
 color:white;
 }
+
+
 .nav ul{
     display:inline-block;
     padding: 0px;
@@ -44,12 +81,12 @@ color:white;
 float: left;
 padding: 0 16px;
 margin: 0px;
-
 text-align: center;
 font-size: medium;
 transition: background-color 0.2s;
 }
 .nav ul li:hover{
+cursor: pointer;
 background-color: black;
 }
 
@@ -61,7 +98,7 @@ padding-top: 200px;
 padding-bottom: 200px;
 }
 
-/* .img-text {
+.img-text {
 text-align: center;
 background-color: black;
 color: burlywood;
@@ -69,7 +106,7 @@ font-size: 20px;
 max-width: 1020px;
 margin: 0px auto;
 padding: 0px 16px;
-} */
+} 
 
 .intro{
     padding-top:"50px";
@@ -92,12 +129,47 @@ footer{
 
 footer ul{
     width:fit-content; 
-    /* float:left; */
-    /* padding-left: 10px; */
+     float:left; 
+     padding-left: 10px; 
 }
 
 footer ul li{
     list-style: none;
 }
-
-
+#form{
+   margin-top: 4rem; 
+   text-align: center;
+   display:inline-block;
+   width: 80%;
+   height:10rem;
+   padding: 10px;
+   border: 10px solid grey;
+   background-color: cadetblue;
+}
+ input[type =text]
+{
+    width: 40%;
+    padding:10px 10px;
+    box-sizing: border-box;
+    margin:5px,0 ;
+}
+input[type =email]
+{
+    width: 40%;
+    padding:10px 10px;
+    box-sizing: border-box;
+    margin:5px,0 ;
+}
+input[type =tel]
+{
+    width: 40%;
+    padding:10px 10px;
+    box-sizing: border-box;
+    margin:5px,0 ;
+}
+button{
+    width: 10%;
+    padding:10px 10px;
+    box-sizing: border-box;
+    margin:5px,0 ;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact Form </title>
+    <link rel ="stylesheet" href ="website.css"/>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function val() {
+
+            var phone = document.getElementById("phone").value
+            if (isNaN(phone)) {
+                alert("Invalid phone number")
+                phone.focus();
+                return;
+            }
+            if (phone.length <= 10) {
+                alert("Phone number should be minimum 10 digits");
+                phone.focus();
+                return;
+            }
+            alert("Thank you for submitting this form");
+        }
+
+
+
+    </script>
+
+    <center>
+    <form id ="form">
+        <div>
+            Name: <input type="text" id="name" placeholder="Enter name" required>
+        </div>
+        <div>
+            Email: <input type="email" id="mail" placeholder="example@try.com" required>
+        </div>
+        <div>
+            Mobile: <input type="tel" id="phone" placeholder="Enter phone number" required>
+        </div>
+        <div>
+            <button type="submit" onclick="val()">Submit</button>
+        </div>
+    </form>
+</center>
+</body>
+
+</html>
